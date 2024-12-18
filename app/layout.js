@@ -1,20 +1,26 @@
-import Logo from "./_components/Logo";
-import Navigation from "./_components/Navigation";
-import '@/app/_styles/global.css'
+import Header from "./_components/Header";
+
+import './_styles/globals.css';
+
 
 export const metadata = {
   title: "Hotel Name"
 }
 
+import { Josefin_Sans} from "next/font/google"
+
+const josefin = Josefin_Sans({
+  subsets:['latin'], 
+  display:'swap'
+})
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <header>
-          <Logo/>
-        <Navigation/>
-        </header>
-        <main>{children}</main>
+      <body className={`${josefin.className} bg-primary-950 text-primary-100
+       min-h-screen`}>
+        <Header/>
+           <main>{children}</main>
         <footer>Copyright</footer>
       </body>
     </html>
