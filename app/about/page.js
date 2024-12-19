@@ -48,8 +48,12 @@ export const metadata = {
           />
         </div>
   
-        <div className="relative aspect-square col-span-2">
-          <Image fill className="object-cover" src="/about-2.jpg" alt="Family that manages The Wild Oasis" />
+        <div className="col-span-2">
+          <Image 
+          src={image2} 
+          placeholder="blur"
+            quality={80}   
+            alt="Family that manages The Wild Oasis" />
         </div>
   
         <div className="col-span-3">
